@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Employeed
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,20 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Employeed</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ 
+  <ion-list *ngFor="let employeed of employeeds">
+    <ion-item (click)="view(employeed)" (dblclick)="formulario(employeed)">
+      <ion-label>{{employeed.rfc}}</ion-label>
+      <ion-label>{{employeed.key}}</ion-label>
+      <ion-label>{{employeed.name.firstName}}</ion-label>
+      <ion-label>{{employeed.salary}}</ion-label>
+      <ion-label>{{employeed.type}}</ion-label>
+      <ion-label>{{employeed.active}}</ion-label>
+      <ion-label>{{employeed.email}}</ion-label>
+      <ion-label>{{employeed.date}}</ion-label> 
+  </ion-item>
+</ion-list>
 </ion-content>

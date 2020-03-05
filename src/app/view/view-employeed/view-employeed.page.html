@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>EXPEDIENTE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>{{employeed.rfc}}</ion-card-subtitle>
+        <ion-card-title>{{employeed.name.firstName}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <h3>Apellido: {{employeed.name.lastName}}</h3>
+        <h3>Salario: {{employeed.salary}}</h3>
+        <h3>Tipo: {{employeed.type}}</h3>
+        <h3>Status: {{employeed.active}}</h3>
+        <h3>Email: {{employeed.email}}</h3>
+        <h3>Fecha inicio: {{employeed.date}}</h3> 
+  <!--   <ion-chip color="danger" *ngIf="!student.active">
+          <ion-label>Inactivo</ion-label>
+        </ion-chip>
+        <ion-chip color="secondary" *ngIf="student.active">
+          <ion-label>Activo</ion-label>
+        </ion-chip>-->
+      </ion-card-content>
+    </ion-card>
+</ion-content>
